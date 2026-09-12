@@ -108,7 +108,7 @@ export default function Navbar() {
 
             {/* Resume button */}
             <a
-              href="/GauravTarale.pdf"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -168,7 +168,7 @@ export default function Navbar() {
               </button>
             ))}
             <a
-              href="/GauravTarale.pdf"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 px-4 py-3 rounded-lg text-sm font-semibold bg-white text-gray-900 text-center"
