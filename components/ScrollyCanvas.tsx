@@ -90,8 +90,17 @@ export default function ScrollyCanvas({
   useEffect(() => {
     const handleResize = () => {
       if (canvasRef.current) {
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
+        const canvas = canvasRef.current;
+        // Use offsetWidth/offsetHeight to match actual rendered CSS size
+        canvas.width = canvas.offsetWidth || window.innerWidth;
+        canvas.height = canvas.offsetHeight || window.innerHeight;
+        if (isLoaded && images.length > 0) {
+          const current = Math.min(
+            frameCount - 1,
+            Math.floor(scrollYProgress.get() * frameCount),
+          );
+          renderFrame(current);
+        }
       }
     };
     window.addEventListener("resize", handleResize);
@@ -107,13 +116,23 @@ export default function ScrollyCanvas({
 
   return (
     <div ref={containerRef} className="h-[500vh] relative">
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div
+        className="sticky top-0 h-screen overflow-hidden"
+        style={{ width: "100vw", maxWidth: "100vw" }}
+      >
         {!isLoaded && (
           <div className="absolute inset-0 flex items-center justify-center text-white z-50">
             Loading...
           </div>
         )}
-        <canvas ref={canvasRef} className="block w-full h-full object-cover" />
+        <canvas
+          ref={canvasRef}
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100%",
+          }}
+        />
         <Overlay scrollYProgress={scrollYProgress} />
       </div>
     </div>

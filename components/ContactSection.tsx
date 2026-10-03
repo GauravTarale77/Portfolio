@@ -128,10 +128,10 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative bg-[#0d0d14] py-24 overflow-hidden"
+      className="relative bg-[#0d0d14] py-10 overflow-hidden"
     >
       {/* Background glow */}
-      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-175 h-75 bg-amber-500/8 blur-[100px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-75 h-50 bg-amber-500/5 blur-[80px] rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section heading */}
@@ -284,6 +284,27 @@ export default function ContactSection() {
                 />
               </div>
 
+              {/* Consent checkbox */}
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  required
+                  className="mt-1 w-4 h-4 accent-amber-400 cursor-pointer flex-shrink-0"
+                />
+               <label htmlFor="consent" className="text-white/40 text-xs leading-relaxed cursor-pointer">
+                  I agree to the{" "}
+                  <a
+                    href="/privacy-policy"
+                    target="_blank"
+                    className="text-amber-400 hover:text-amber-300 underline transition-colors"
+                  >
+                    Privacy Policy
+                  </a>{" "}
+                  and consent to my name and email being used to respond to my message.
+                </label>
+              </div>
+
               {/* Submit button */}
               <button
                 type="submit"
@@ -377,13 +398,15 @@ export default function ContactSection() {
         </div>
 
         {/* Footer line */}
-        <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-10 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/20 text-xs font-mono">
-            © {new Date().getFullYear()} Gaurav Tarale. Built with Next.js &
-            Tailwind CSS.
-          </p>
-          <p className="text-white/20 text-xs font-mono">
-            Akola, Maharashtra, India
+            © {new Date().getFullYear()} Gaurav Tarale. Built with Next.js & Tailwind CSS.{" "}
+            <a
+              href="/privacy-policy"
+              className="hover:text-white/50 underline transition-colors"
+            >
+             Privacy Policy
+            </a>
           </p>
         </div>
       </div>

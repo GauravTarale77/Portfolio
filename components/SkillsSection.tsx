@@ -241,7 +241,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="relative bg-[#0d0d14] pt-16 pb-6"
+      className="relative bg-[#0d0d14] pt-16 pb-6 overflow-hidden"
       style={{}}
     >
       {/* Subtle background glow */}
@@ -261,7 +261,7 @@ export default function SkillsSection() {
       </div>
 
       {/* Marquee rows */}
-      <div className="space-y-5" style={{ overflow: "visible" }}>
+      <div className="space-y-5">
         <MarqueeRow
           items={row1}
           direction="left"

@@ -160,11 +160,11 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative bg-[#0d0d14] py-24 overflow-hidden"
+      className="relative bg-[#0d0d14] py-10 overflow-hidden"
     >
       {/* Background glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/4 -translate-y-1/2 w-100 h-100 bg-amber-500/5 blur-[100px] rounded-full" />
-      <div className="pointer-events-none absolute top-1/2 right-1/4 -translate-y-1/2 w-75 h-75 bg-purple-500/5 blur-[100px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/2 left-1/4 -translate-y-1/2 w-50 h-50 bg-amber-500/5 blur-[80px] rounded-full" />
+      <div className="pointer-events-none absolute top-1/2 right-1/4 -translate-y-1/2 w-50 h-50 bg-purple-500/5 blur-[80px] rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section heading */}
