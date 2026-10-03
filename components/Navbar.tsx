@@ -107,7 +107,7 @@ export default function Navbar() {
             ))}
 
             {/* Resume button */}
-            <a
+            {/* <a
               href=""
               target="_blank"
               rel="noopener noreferrer"
@@ -119,7 +119,7 @@ export default function Navbar() {
               "
             >
               Resume ↗
-            </a>
+            </a> */}
           </div>
 
           {/* Mobile hamburger */}
@@ -167,14 +167,14 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
+            {/* <a
               href=""
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 px-4 py-3 rounded-lg text-sm font-semibold bg-white text-gray-900 text-center"
             >
               Resume ↗
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>
